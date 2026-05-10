@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    direction: rtl;
+    font-family: 'Heebo', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FAF7F5;
+    color: #2D2D2D;
+    text-align: right;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
