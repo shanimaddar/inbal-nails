@@ -1,0 +1,533 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ענבל בירוק ורוד</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="ימי השתלמות אישיים אחד על אחד למניקוריסטיות, אצל ענבל בקיבוץ שער העמקים.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Frank+Ruhl+Libre:wght@400;500&family=Assistant:wght@400;600;700&display=swap">
+<style>
+/* Concept: colour in daylight. The leaves behind her photos become the page: deep garden green and
+   chrome pink trade places once per chapter, and every picture stands in an arch, as if in a garden wall. */
+:root {
+  color-scheme: light;
+  --bg: #12301F;
+  --ink: #F9DDE4;
+  --display: "Amatic SC", "Frank Ruhl Libre", serif;
+  --heading: "Amatic SC", "Frank Ruhl Libre", serif;
+  --body: "Assistant", "Segoe UI", Arial, sans-serif;
+  --gutter: clamp(18px, 4vw, 56px);
+  --arch: clamp(90px, 14vw, 200px);
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --dock: 72px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.6; -webkit-tap-highlight-color: transparent; transition: background-color 1.6s ease, color 1.6s ease; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; }
+h1, h2, h3, .big, .topics li, .panel p, .ticker li { font-family: var(--display); font-weight: 700; }
+h1, h2, h3, .nav b, .seven-arch b, .dock-text strong { font-family: var(--heading); font-weight: 700; }
+h2 { font-size: clamp(54px, 7.4vw, 110px); line-height: 1; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.inv :focus-visible { outline-color: var(--bg); }
+
+.page { overflow-x: clip; padding-bottom: calc(var(--dock) + env(safe-area-inset-bottom, 0px)); }
+.sec { padding-block: clamp(64px, 9vw, 128px); padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
+.inner { max-width: 1320px; margin-inline: auto; }
+.inv { background: var(--ink); color: var(--bg); transition: background-color 1.6s ease, color 1.6s ease; }
+
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 56px; padding: 10px 34px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 18px; line-height: 1.2; text-decoration: none; border-radius: 999px; transition: background-color 1.6s ease, color 1.6s ease, transform .3s var(--ease); }
+.cta svg { flex: none; width: 22px; height: 22px; fill: currentColor; }
+@media (hover: hover) { .cta:hover { transform: scale(1.04); } }
+
+/* Hero: centred words between an arch that stands and an arch that hangs */
+.hero { padding-block: clamp(16px, 2vw, 24px) clamp(48px, 7vw, 96px); }
+.nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; min-height: 48px; font-weight: 600; }
+.nav b { font-size: 42px; line-height: 1; }
+.nav span:last-child { text-align: left; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr) minmax(0, 1fr); gap: 28px clamp(20px, 3vw, 44px); align-items: start; margin-top: clamp(18px, 2.6vw, 36px); }
+.hero-copy { text-align: center; padding-top: clamp(0px, 3vw, 44px); }
+.hero h1 { font-size: clamp(52px, 6.4vw, 110px); line-height: 1; }
+.hero h1 span { display: block; animation: rise .9s var(--ease) backwards; animation-delay: calc(var(--n) * 90ms); }
+@keyframes rise { from { transform: translateY(20%); opacity: .3; } }
+.lead { margin: 22px auto 0; max-width: 46ch; display: grid; gap: 8px; }
+.lead .first { font-weight: 700; font-size: clamp(19px, 1.6vw, 22px); line-height: 1.35; }
+.cta-wrap { margin-top: 24px; }
+.arch { overflow: hidden; height: clamp(420px, 42vw, 600px); }
+.arch img { width: 100%; height: 112%; object-fit: cover; transform: translateY(var(--py, -5%)); }
+.arch.up { border-radius: var(--arch) var(--arch) 0 0; }
+.arch.down { border-radius: 0 0 var(--arch) var(--arch); margin-top: clamp(0px, 6vw, 88px); }
+
+/* Ticker */
+.ticker { overflow: hidden; direction: ltr; padding-block: 12px; }
+.ticker-track { display: flex; width: max-content; animation: slide 34s linear infinite; }
+.ticker ul { display: flex; flex: none; direction: rtl; }
+.ticker li { display: flex; align-items: center; gap: clamp(22px, 3vw, 44px); padding-inline-start: clamp(22px, 3vw, 44px); font-size: clamp(32px, 3.7vw, 52px); line-height: 1.2; white-space: nowrap; }
+.ticker li::after { content: ""; flex: none; width: .5em; height: .5em; background: currentColor; clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); }
+@keyframes slide { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.about figure { overflow: hidden; aspect-ratio: 3 / 4; border-radius: var(--arch) var(--arch) 0 0; }
+.about figure img { width: 100%; height: 100%; object-fit: cover; object-position: 48% 55%; }
+.about h2 { margin-bottom: 24px; }
+.prose { max-width: 60ch; display: grid; gap: 14px; }
+.quote { margin: clamp(56px, 8vw, 112px) auto 0; text-align: center; font-size: clamp(42px, 6.2vw, 94px); line-height: 1.08; max-width: 20em; text-wrap: balance; }
+
+/* Learn */
+.learn-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 48px; align-items: end; margin-bottom: clamp(28px, 4vw, 52px); }
+.learn-head p { max-width: 46ch; }
+.topics { display: grid; gap: 6px; }
+.topics li { display: flex; align-items: center; min-height: 74px; padding: 8px clamp(14px, 2.4vw, 32px); border: 1px solid var(--ink); border-radius: 999px; font-size: clamp(30px, 4vw, 58px); line-height: 1.05; transition: background-color .55s ease, color .55s ease, transform .65s var(--ease); cursor: default; }
+.topics .thumb { flex: none; width: 0; height: clamp(54px, 5.6vw, 80px); overflow: hidden; border-radius: 999px 999px 0 0; transition: width .8s var(--ease), margin .8s var(--ease); }
+.topics .thumb img { width: clamp(64px, 7vw, 100px); max-width: none; height: 100%; object-fit: cover; }
+.topics li.on { background: var(--ink); color: var(--bg); transform: scale(1.015); }
+.topics li.on .thumb { width: clamp(64px, 7vw, 100px); margin-inline-end: clamp(12px, 2vw, 24px); }
+
+/* Who */
+.who h2 { margin-bottom: clamp(22px, 3vw, 36px); }
+.tabs { position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; max-width: 100%; padding: 5px; border: 1px solid var(--ink); border-radius: 99px; }
+.tabs::before { content: ""; position: absolute; top: 5px; bottom: 5px; right: 5px; width: calc(50% - 5px); border-radius: 99px; background: var(--ink); transition: transform .7s var(--ease), background-color 1.6s ease; }
+.tabs[data-on="1"]::before { transform: translateX(-100%); }
+.tab { position: relative; min-height: 50px; padding: 8px clamp(12px, 3vw, 34px); border: 0; background: none; cursor: pointer; font-weight: 700; font-size: clamp(15px, 1.5vw, 18px); line-height: 1.2; border-radius: 99px; transition: color .45s ease; }
+.tab[aria-selected="true"] { color: var(--bg); }
+.panel { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); align-items: center; margin-top: clamp(24px, 3vw, 44px); }
+.panel[hidden] { display: none; }
+.panel p { font-family: var(--body); font-weight: 400; font-size: clamp(21px, 2.2vw, 30px); line-height: 1.5; }
+.panel .pic { overflow: hidden; width: 100%; max-width: 420px; margin-inline: auto; aspect-ratio: 1 / 1.1; border-radius: 0 0 var(--arch) var(--arch); }
+.panel .pic img { width: 100%; height: 100%; object-fit: cover; }
+.who .note { margin-top: clamp(24px, 3vw, 40px); font-weight: 700; }
+
+/* Why */
+.why-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); align-items: stretch; margin-top: clamp(26px, 4vw, 48px); }
+.seven-arch { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; text-align: center; padding: clamp(48px, 6vw, 80px) clamp(22px, 3vw, 40px) clamp(28px, 3vw, 44px); border-radius: 999px 999px 0 0; }
+.seven-arch b { font-size: clamp(130px, 17vw, 260px); line-height: .95; }
+.seven-arch h3 { font-size: clamp(38px, 4vw, 58px); line-height: 1.05; }
+.why-list { display: grid; align-content: center; gap: clamp(24px, 3vw, 40px); }
+.why-list h3 { font-size: clamp(36px, 3.7vw, 56px); line-height: 1.05; margin-bottom: 6px; }
+
+/* Gallery: arches stand and hang in turn */
+.work { padding-left: 0; padding-right: 0; }
+.work-top { padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
+.work-top .inner { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+.arrows { display: flex; gap: 8px; }
+.arrows button { width: 54px; height: 54px; border: 1px solid var(--ink); border-radius: 50%; background: none; cursor: pointer; display: grid; place-items: center; }
+.arrows svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.gallery { --item: clamp(250px, 28vw, 400px); display: flex; gap: clamp(8px, 1vw, 16px); margin-top: 26px; padding-block: 12px; padding-inline: calc(50vw - var(--item) / 2); overflow-x: auto; scrollbar-width: none; scroll-snap-type: x mandatory; cursor: grab; }
+.gallery.drag { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.gallery::-webkit-scrollbar { display: none; }
+.gallery li { flex: none; width: var(--item); scroll-snap-align: center; transform: scale(var(--s, .9)); }
+.gallery .shot { aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--arch) var(--arch) 0 0; }
+.gallery li:nth-child(even) .shot { border-radius: 0 0 var(--arch) var(--arch); }
+.gallery img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+
+/* Day: arched cards stack */
+.day .intro p { margin-top: 16px; font-size: clamp(20px, 1.7vw, 24px); line-height: 1.45; font-weight: 600; max-width: 54ch; }
+.cards { display: grid; gap: 20px; margin-top: clamp(30px, 4vw, 52px); }
+.card { position: sticky; top: calc(14px + var(--i) * 14px + env(safe-area-inset-top, 0px)); display: grid; grid-template-columns: minmax(0, 1fr) clamp(62px, 13vw, 170px); gap: clamp(16px, 4vw, 60px); align-items: center; padding: clamp(34px, 5vw, 72px) clamp(24px, 5vw, 76px); border-radius: clamp(44px, 8vw, 120px) clamp(44px, 8vw, 120px) 0 0; transform: scale(var(--s, 1)); transform-origin: top center; }
+.card h3 { font-size: clamp(42px, 5.8vw, 88px); line-height: 1; }
+.card .sub { font-weight: 700; margin-block: 8px 12px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.35; }
+.card .txt { max-width: 62ch; }
+.card h3 + .txt { margin-top: 14px; }
+.art { position: relative; aspect-ratio: .56; overflow: hidden; background: #FFF4F6; clip-path: url(#almond); }
+.coat { position: absolute; inset: 0; transform: translateY(100%); transition: transform 1.5s var(--ease) .1s; }
+.card.on .coat { transform: none; }
+.coat.c1 { background: #F6CFDA; }
+.coat.c2 { background: #E9A9BC; }
+.coat.c3 { background: #2C6B47; }
+
+/* Close */
+.tip { text-align: center; padding-block: clamp(72px, 11vw, 150px); }
+.tip h2 { font-size: clamp(54px, 8.6vw, 136px); max-width: 13em; margin-inline: auto; }
+.tip .prose { margin: 24px auto 0; font-size: clamp(18px, 1.5vw, 21px); }
+.tip .big { margin-top: 32px; font-size: clamp(40px, 5vw, 74px); line-height: 1.08; }
+.tip .cta { margin-top: 24px; min-height: 64px; font-size: 20px; }
+.sign { margin-top: 40px; font-weight: 600; }
+
+/* Dock */
+.dock { position: fixed; z-index: 30; inset: auto 0 0 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: var(--dock); padding-block: 8px calc(8px + env(safe-area-inset-bottom, 0px)); padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); background: var(--bg); color: var(--ink); box-shadow: 0 -1px 0 var(--ink); transition: background-color 1.6s ease, color 1.6s ease, opacity .35s, translate .45s var(--ease), visibility .35s; }
+.dock::before { content: ""; position: absolute; inset: -2px 0 auto 0; height: 3px; background: var(--ink); transform: scaleX(var(--p, 0)); transform-origin: right; }
+.dock-text { min-width: 0; line-height: 1.2; }
+.dock-text strong { display: block; font-size: 27px; line-height: 1; }
+.dock-text span { display: block; font-size: 14px; }
+.dock .cta { flex: none; min-height: 48px; padding: 8px 28px; font-size: 17px; }
+
+@media (max-width: 860px) {
+  .nav { grid-template-columns: minmax(0, 1fr) auto; }
+  .nav span:first-child { display: none; }
+  .nav b { grid-row: 1; }
+  .hero-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; }
+  .hero-copy { display: contents; }
+  .hero h1 { grid-column: 1 / -1; order: 0; font-size: 14.5vw; text-align: center; padding-top: 6px; }
+  .arch { order: 1; height: 66vw; max-height: 52vh; }
+  .arch.down { margin-top: 28px; }
+  .cta-wrap { grid-column: 1 / -1; order: 2; margin-top: 4px; text-align: center; }
+  .lead { grid-column: 1 / -1; order: 3; margin-top: 0; text-align: center; }
+  .about-grid, .learn-head, .panel, .why-grid { grid-template-columns: minmax(0, 1fr); }
+  .about figure { max-width: 280px; margin-inline: auto; }
+  .gallery { --item: 72vw; }
+  .arrows { display: none; }
+  .topics li { min-height: 66px; border-radius: 34px; }
+  .card { grid-template-columns: minmax(0, 1fr); padding-top: 44px; }
+  .card h3, .card .sub { padding-left: 54px; }
+  .art { position: absolute; top: 30px; left: 22px; width: 42px; }
+  .cta { font-size: 17px; padding-inline: 20px; }
+}
+@media (min-width: 861px) {
+  .dock.hide { opacity: 0; translate: 0 24px; visibility: hidden; }
+}
+@media (max-width: 860px) {
+  .topics li:last-child { min-height: 3.6em; }
+}
+@media (min-width: 461px) and (max-width: 860px) {
+  .card h3 + .txt { padding-left: 60px; }
+}
+@media (max-width: 860px) and (max-height: 700px) {
+  .card { position: relative; top: auto; }
+}
+@media (max-width: 360px) {
+  .dock-text span { font-size: 13px; }
+  .dock .cta { padding: 8px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .coat { transform: none; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="almond" clipPathUnits="objectBoundingBox">
+      <path d="M.5 0C.69.05.9.25.97.5 1 .7 1 .84.88.93.76 1 .24 1 .12.93 0 .84 0 .7.03.5.1.25.31.05.5 0Z"/>
+    </clipPath>
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.600 15L2 22l5.100-1.300A10 10 0 1 0 12 2Zm0 18.200a8.200 8.200 0 0 1-4.200-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1 1 12 20.200Zm4.500-6.100c-.25-.12-1.450-.72-1.680-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.040-.38-1.980-1.220-.73-.65-1.230-1.460-1.370-1.700-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.330-.76-1.820-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.040 0 1.200.88 2.360 1 2.530.12.16 1.730 2.640 4.190 3.700.59.25 1.040.4 1.400.52.59.19 1.120.16 1.540.1.47-.07 1.450-.59 1.650-1.170.2-.57.2-1.070.14-1.170-.06-.1-.22-.16-.47-.28Z"/></symbol>
+  </defs>
+</svg>
+
+<div class="page" dir="rtl" lang="he">
+
+  <header class="sec hero" data-tone="0">
+    <div class="inner">
+      <div class="nav"><span>קיבוץ שער העמקים</span><b>ענבל</b><span>השלב הבא שלך</span></div>
+      <div class="hero-grid">
+        <div class="arch up" aria-hidden="true"><img class="par" data-dir="-1" src="img/1.jpg" alt="" width="1200" height="1600" fetchpriority="high" style="object-position:45% 55%"></div>
+        <div class="hero-copy">
+          <h1>
+            <span style="--n:0">את כבר בתחום.</span>
+            <span style="--n:1">עכשיו הגיע הזמן</span>
+            <span style="--n:2">לעלות רמה!</span>
+          </h1>
+          <div class="lead">
+            <p class="first">הגיע הרגע לדייק את הטכניקה שלך ולהתקדם מקצועית.</p>
+            <p>ימי השתלמות אישיים אחד על אחד, המותאמים לרמה שלך, לצרכים שלך ולמטרות המקצועיות שלך.</p>
+            <p>מהכנת הציפורן ועד לתוצאה הסופית, עם דגש על טכניקה נכונה, דיוק בפרטים הקטנים ויחס אישי לאורך כל הדרך.</p>
+          </div>
+          <div class="cta-wrap"><a class="cta" href="https://wa.me/972509800777?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%A0%D7%91%D7%9C%D7%99%21%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%A2%D7%9E%D7%95%D7%93%20%D7%94%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%F0%9F%92%85%F0%9F%8F%BB" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>אני רוצה לשמוע על ההשתלמויות</a></div>
+        </div>
+        <div class="arch down" aria-hidden="true"><img class="par" data-dir="1" src="img/3.jpg" alt="" width="1200" height="1600" style="object-position:62% 42%"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker inv">
+    <div class="ticker-track">
+      <ul><li>אחד על אחד</li><li>כ־6 שעות</li><li>תעודה בסיום</li><li>קיבוץ שער העמקים</li><li>אחד על אחד</li><li>כ־6 שעות</li><li>תעודה בסיום</li><li>קיבוץ שער העמקים</li></ul>
+      <ul aria-hidden="true"><li>אחד על אחד</li><li>כ־6 שעות</li><li>תעודה בסיום</li><li>קיבוץ שער העמקים</li><li>אחד על אחד</li><li>כ־6 שעות</li><li>תעודה בסיום</li><li>קיבוץ שער העמקים</li></ul>
+    </div>
+  </div>
+
+  <main>
+  <section class="sec about" data-tone="0">
+    <div class="inner">
+      <div class="about-grid">
+        <figure><img src="img/2.jpg" alt="ציפורני שקד בגוון לבן חלבי על רקע עלים ירוקים" width="1200" height="1600" loading="lazy"></figure>
+        <div>
+          <h2>נעים להכיר, אני ענבל🤍</h2>
+          <div class="prose">
+            <p>אני בתחום הציפורניים כבר 7 שנים, ובמהלך הדרך צברתי ניסיון בעבודה עם מאות לקוחות.</p>
+            <p>עם השנים הבנתי שמקצועיות אמיתית נבנית מהיסודות: מהבנת התהליך, דרך שליטה בטכניקה ועד לדיוק בפרטים הקטנים שעושים את ההבדל.</p>
+            <p>כיום אני מעבירה ימי השתלמות אישיים, אחד על אחד, למניקוריסטיות שרוצות לחזק את הידע המקצועי שלהן, לדייק את העבודה ולהתקדם לשלב הבא.</p>
+            <p>הגישה שלי מבוססת על סבלנות, ירידה לפרטים והתאמה אישית לכל תלמידה. חשוב לי להבין מה כבר עובד לך טוב, לזהות את הנקודות שבהן את יכולה להשתפר ולתת לך כלים מעשיים להמשך הדרך.</p>
+          </div>
+        </div>
+      </div>
+      <p class="big quote">כי כל תלמידה נמצאת במקום אחר, ולכל אחת מגיעה הדרכה שמתאימה לה.</p>
+    </div>
+  </section>
+
+  <section class="sec learn" data-tone="1">
+    <div class="inner">
+      <div class="learn-head">
+        <h2>מה נלמד יחד?</h2>
+        <p>במהלך ההשתלמות נעבור על שלבי העבודה החשובים ונעמיק בטכניקות שיעזרו לך לעבוד בצורה מדויקת ומקצועית יותר.</p>
+      </div>
+      <ul class="topics" id="topics">
+        <li class="on"><span class="thumb"><img src="img/2.jpg" alt="" loading="lazy"></span>הכנה נכונה של הציפורן</li>
+        <li><span class="thumb"><img src="img/4.jpg" alt="" loading="lazy"></span>מניקור מדויק ונקי</li>
+        <li><span class="thumb"><img src="img/7.jpg" alt="" loading="lazy"></span>מריחה צמודה לקוטיקולה</li>
+        <li><span class="thumb"><img src="img/1.jpg" alt="" loading="lazy"></span>שימוש נכון בכלים</li>
+        <li><span class="thumb"><img src="img/8.jpg" alt="" loading="lazy"></span>חיטוי ועיקור</li>
+        <li><span class="thumb"><img src="img/3.jpg" alt="" loading="lazy"></span>מבנה אנטומי נכון</li>
+        <li><span class="thumb"><img src="img/6.jpg" alt="" loading="lazy"></span>זיהוי טעויות ושיפור נקודות החולשה בטכניקה שלך</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec who" data-tone="1">
+    <div class="inner">
+      <h2>למי ההשתלמות מתאימה?</h2>
+      <div class="tabs" id="tabs" role="tablist" aria-label="למי ההשתלמות מתאימה" data-on="0">
+        <button class="tab" type="button" role="tab" id="tab0" aria-controls="panel0" aria-selected="true">סיימת קורס בסיסי</button>
+        <button class="tab" type="button" role="tab" id="tab1" aria-controls="panel1" aria-selected="false" tabindex="-1">כבר עובדת בתחום</button>
+      </div>
+      <div class="panel" id="panel0" role="tabpanel" aria-labelledby="tab0">
+        <p>למי שסיימה קורס בסיסי ורוצה לחזק את היסודות, להבין לעומק את שלבי העבודה ולפתח ביטחון מקצועי.</p>
+        <div class="pic"><img src="img/7.jpg" alt="ציפורני סטילטו ארוכות בגוון ניוד ורוד" width="1200" height="1600" loading="lazy"></div>
+      </div>
+      <div class="panel" id="panel1" role="tabpanel" aria-labelledby="tab1" hidden>
+        <p>למניקוריסטיות שכבר עובדות בתחום ורוצות לדייק את הטכניקה, לשפר את שיטת העבודה ולהגיע לתוצאות אסתטיות ומדויקות יותר.</p>
+        <div class="pic"><img src="img/8.jpg" alt="פרנץ׳ אדום על ציפורניים קצרות" width="1200" height="1600" loading="lazy"></div>
+      </div>
+      <p class="note">ההשתלמות אישית ומותאמת לרמה שלך ולמטרות שאת רוצה להשיג.</p>
+    </div>
+  </section>
+
+  <section class="sec why" data-tone="1">
+    <div class="inner">
+      <h2>למה ללמוד איתי?</h2>
+      <div class="why-grid">
+        <div class="seven-arch inv">
+          <b id="seven">7</b>
+          <h3>שנות ניסיון בתחום</h3>
+          <p>ניסיון מקצועי שנצבר לאורך שנים של עבודה עם לקוחות.</p>
+        </div>
+        <ul class="why-list">
+          <li><h3>יחס אישי אחד על אחד</h3><p>כל תשומת הלב מופנית אלייך, לשאלות שלך ולצרכים המקצועיים שלך.</p></li>
+          <li><h3>דיוק בפרטים הקטנים</h3><p>התמקדות בשלבי העבודה ובנקודות שדורשות שיפור.</p></li>
+          <li><h3>למידה סבלנית ויסודית</h3><p>הסברים, הכוונה והעמקה בטכניקה, בקצב שמתאים לתהליך הלמידה שלך.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec work" data-tone="0">
+    <div class="work-top">
+      <div class="inner">
+        <div><h2>מהעבודות שלי</h2><p>החליקי לצד כדי לראות עוד</p></div>
+        <div class="arrows">
+          <button type="button" id="galPrev" aria-label="לתמונה הקודמת"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          <button type="button" id="galNext" aria-label="לתמונה הבאה"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <ul class="gallery" id="gallery" tabindex="0" aria-label="גלריית עבודות">
+      <li><div class="shot"><img src="img/1.jpg" alt="כרום ורוד פנינה על רקע עלים" width="1200" height="1600" loading="lazy"></div></li>
+      <li><div class="shot"><img src="img/6.jpg" alt="ציפורני שקד באדום עמוק ומבריק" width="1200" height="1600" loading="lazy"></div></li>
+      <li><div class="shot"><img src="img/5.jpg" alt="פרנץ׳ טורקיז עם ציור פרחים לבנים" width="1200" height="1600" loading="lazy" style="object-position:50% 60%"></div></li>
+      <li><div class="shot"><img src="img/7.jpg" alt="ציפורני סטילטו ארוכות בגוון ניוד ורוד" width="1200" height="1600" loading="lazy"></div></li>
+      <li><div class="shot"><img src="img/3.jpg" alt="עיצוב צדפים תלת־ממדי באפרסק ואלמוג" width="1200" height="1600" loading="lazy"></div></li>
+      <li><div class="shot"><img src="img/8.jpg" alt="פרנץ׳ אדום על ציפורניים קצרות" width="1200" height="1600" loading="lazy"></div></li>
+      <li><div class="shot"><img src="img/2.jpg" alt="ציפורני שקד בגוון לבן חלבי" width="1200" height="1600" loading="lazy"></div></li>
+      <li><div class="shot"><img src="img/4.jpg" alt="פרנץ׳ פנינה עדין" width="1200" height="1600" loading="lazy"></div></li>
+    </ul>
+  </section>
+
+  <section class="sec day" data-tone="0">
+    <div class="inner">
+      <div class="intro">
+        <h2>ככה נראה היום שלך</h2>
+        <p>יום שלם, רק את ואני, בקצב שלך. את מגיעה עם מודליסטית, ואנחנו עובדות יחד מההכנה ועד התוצאה הסופית.</p>
+      </div>
+      <ol class="cards" id="cards">
+        <li class="card inv" style="--i:0">
+          <div>
+            <h3>הדגמה מקצועית</h3>
+            <p class="sub">כל הפרטים הקטנים שעושים את ההבדל</p>
+            <p class="txt">נצלול לעומק שיטת העבודה שלי, שלב אחר שלב, עם הסברים מקצועיים, דיוק בפרטים הקטנים וטכניקות שיעזרו לך להבין לא רק איך לבצע, אלא גם למה. תקבלי כלים, דגשים וטיפים מהניסיון שלי, במטרה לקחת את רמת העבודה שלך קדימה.</p>
+          </div>
+          <div class="art" aria-hidden="true"><div class="coat c1"></div></div>
+        </li>
+        <li class="card inv" style="--i:1">
+          <div>
+            <h3>עבודה מעשית</h3>
+            <p class="sub">הליווי האישי שעושה את ההבדל</p>
+            <p class="txt">זה הזמן שלך ליישם את מה שלמדת, כשהפעם את לא צריכה להבין הכול לבד. אהיה לצדך לאורך העבודה, אדייק איתך כל שלב, אזהה נקודות לשיפור ואתן לך הכוונה מקצועית המותאמת אלייך. המטרה היא שתביני את הטכניקה לעומק, תחדדי את היכולות שלך ותצאי עם כלים מעשיים שתוכלי ליישם בעבודה שלך.</p>
+          </div>
+          <div class="art" aria-hidden="true"><div class="coat c1"></div><div class="coat c2"></div></div>
+        </li>
+        <li class="card inv" style="--i:2">
+          <div>
+            <h3>סיכום מקצועי וקבלת תעודה</h3>
+            <p class="txt">נסכם את כל מה שלמדנו, נדייק את הנקודות החשובות ונחדד את הדגשים שילוו אותך גם בהמשך הדרך. בסיום ההשתלמות תקבלי תעודה, ותצאי עם ידע מקצועי, הבנה מעמיקה יותר של הטכניקה ותוכנית ברורה להמשך התרגול וההתפתחות שלך.</p>
+          </div>
+          <div class="art" aria-hidden="true"><div class="coat c1"></div><div class="coat c2"></div><div class="coat c3"></div></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec tip" data-tone="0">
+    <div class="inner">
+      <h2>זו לא רק השתלמות, זו השקעה ברמה המקצועית שלך.</h2>
+      <p class="prose">זמן איכות מקצועי, יחס אישי, ירידה לפרטים הקטנים וליווי צמוד שמאפשר לך לעצור, לשאול, להבין ולדייק את העבודה שלך. כל מה שצריך כדי להתקדם לשלב הבא הוא ללמוד את הדברים הנכונים, בדרך הנכונה.</p>
+      <p class="big">השלב הבא שלך מתחיל כאן.</p>
+      <a class="cta" href="https://wa.me/972509800777?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%A0%D7%91%D7%9C%D7%99%21%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%A2%D7%9E%D7%95%D7%93%20%D7%94%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%F0%9F%92%85%F0%9F%8F%BB" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>לפרטים ולתיאום השתלמות בוואטסאפ</a>
+      <p class="sign">ענבל, קיבוץ שער העמקים</p>
+    </div>
+  </section>
+  </main>
+
+  <aside class="dock" id="dock" aria-label="יצירת קשר בוואטסאפ">
+    <div class="dock-text"><strong>השלב הבא שלך</strong><span>השתלמות אישית אחת על אחת</span></div>
+    <a class="cta" href="https://wa.me/972509800777?text=%D7%94%D7%99%D7%99%20%D7%A2%D7%A0%D7%91%D7%9C%D7%99%21%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%A2%D7%9E%D7%95%D7%93%20%D7%94%D7%94%D7%A9%D7%AA%D7%9C%D7%9E%D7%95%D7%AA%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%F0%9F%92%85%F0%9F%8F%BB" target="_blank" rel="noopener">לפרטים</a>
+  </aside>
+</div>
+
+<script>
+(function () {
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var clamp = function (v, a, b) { return Math.max(a === undefined ? 0 : a, Math.min(b === undefined ? 1 : b, v)); };
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* The page has three chapters: meet her (green), what you get (pink), the work and the day (green).
+     Colour only changes between chapters, never between blocks inside one. */
+  var TONES = [
+    { bg: '#12301F', ink: '#F9DDE4' },
+    { bg: '#F9DDE4', ink: '#12301F' }
+  ];
+  var root = document.documentElement, current = 0;
+
+  /* Measured on scroll: an observer's rootMargin is ignored inside a cross-origin frame */
+  var sections = $$('[data-tone]');
+  function toneAt(y) {
+    var tone = null;
+    sections.some(function (s) {
+      var r = s.getBoundingClientRect();
+      if (r.top > y || r.bottom <= y) return false;
+      tone = +s.dataset.tone;
+      return true;
+    });
+    return tone;
+  }
+  function updateSection() {
+    /* Both points must agree, so small scrolls around a chapter edge can't flip the colour back and forth */
+    var mid = innerHeight * .5, a = toneAt(mid - 90), b = toneAt(mid + 90);
+    if (a === null || a !== b || a === current) return;
+    current = a;
+    root.style.setProperty('--bg', TONES[a].bg);
+    root.style.setProperty('--ink', TONES[a].ink);
+  }
+
+  /* Learn: the row nearest the middle of the screen opens */
+  var topics = $$('#topics li');
+  function setTopic(el) { topics.forEach(function (t) { t.classList.toggle('on', t === el); }); }
+  topics.forEach(function (t) {
+    if (fine) t.addEventListener('pointerenter', function () { setTopic(t); });
+    t.addEventListener('click', function () { setTopic(t); });
+  });
+  function updateTopics() {
+    var mid = innerHeight * .45, best = null, bestD = 1e9;
+    topics.forEach(function (t) {
+      var r = t.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid);
+      if (d < bestD) { bestD = d; best = t; }
+    });
+    var box = $('#topics').getBoundingClientRect(), on = $('#topics li.on'), or = on.getBoundingClientRect();
+    /* Stay on the open row until another is clearly closer, so rows don't flick past */
+    if (box.bottom > 0 && box.top < innerHeight && best !== on && bestD + 28 < Math.abs(or.top + or.height / 2 - mid)) setTopic(best);
+  }
+
+  /* Who: tabs */
+  var tabsEl = $('#tabs'), tabs = $$('.tab', tabsEl);
+  function setTab(n, focus) {
+    tabsEl.dataset.on = n;
+    tabs.forEach(function (t, i) {
+      t.setAttribute('aria-selected', String(i === n));
+      t.tabIndex = i === n ? 0 : -1;
+      $('#panel' + i).hidden = i !== n;
+    });
+    if (focus) tabs[n].focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { setTab(i); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); setTab(1 - i, true); }
+    });
+  });
+
+  /* Why: the 7 counts up once */
+  var seven = $('#seven');
+  if (!reduced) {
+    var sevenIO = new IntersectionObserver(function (es) {
+      if (!es[0].isIntersecting) return;
+      sevenIO.disconnect();
+      var n = 0; seven.textContent = '0';
+      var iv = setInterval(function () { seven.textContent = String(++n); if (n >= 7) clearInterval(iv); }, 85);
+    }, { threshold: .4 });
+    sevenIO.observe(seven);
+  }
+
+  /* Gallery: the centre arch grows; a mouse can drag */
+  var gal = $('#gallery'), items = $$('li', gal);
+  function updateGallery() {
+    if (reduced) return;
+    var mid = gal.getBoundingClientRect().left + gal.clientWidth / 2;
+    items.forEach(function (li) {
+      var r = li.getBoundingClientRect(), d = Math.abs((r.left + r.width / 2 - mid) / r.width);
+      li.style.setProperty('--s', (1 - .12 * clamp(d)).toFixed(3));
+    });
+  }
+  gal.addEventListener('scroll', function () { requestAnimationFrame(updateGallery); }, { passive: true });
+  function step(dir) {
+    gal.scrollBy({ left: dir * (items[0].offsetWidth + (parseFloat(getComputedStyle(gal).columnGap) || 0)), behavior: reduced ? 'auto' : 'smooth' });
+  }
+  $('#galNext').addEventListener('click', function () { step(-1); });
+  $('#galPrev').addEventListener('click', function () { step(1); });
+  if (fine) {
+    var dragging = false, startX = 0, startS = 0;
+    gal.addEventListener('pointerdown', function (e) { dragging = true; startX = e.clientX; startS = gal.scrollLeft; gal.classList.add('drag'); gal.setPointerCapture(e.pointerId); });
+    gal.addEventListener('pointermove', function (e) { if (dragging) gal.scrollLeft = startS - (e.clientX - startX); });
+    var end = function () { dragging = false; gal.classList.remove('drag'); };
+    gal.addEventListener('pointerup', end);
+    gal.addEventListener('pointercancel', end);
+  }
+
+  /* On desktop the dock waits until the hero's own button has scrolled away */
+  new IntersectionObserver(function (es) { $('#dock').classList.toggle('hide', es[0].isIntersecting); }).observe($('.hero-copy .cta'));
+
+  /* Scroll-linked: hero arches drift apart, coats go on, cards stack, the dock line fills */
+  var cards = $$('#cards .card'), pars = $$('.par'), dock = $('#dock');
+  function onScroll() {
+    var vh = innerHeight, doc = document.documentElement;
+    dock.style.setProperty('--p', clamp(scrollY / Math.max(1, doc.scrollHeight - vh)).toFixed(3));
+    updateSection();
+    updateTopics();
+    cards.forEach(function (c, i) {
+      var r = c.getBoundingClientRect(), next = cards[i + 1];
+      if (r.top < vh * .8) c.classList.add('on');
+      if (next && !reduced) {
+        var nr = next.getBoundingClientRect();
+        c.style.setProperty('--s', (1 - .04 * clamp((r.bottom - nr.top) / r.height)).toFixed(3));
+      }
+    });
+    if (!reduced) {
+      var p = clamp(scrollY / Math.max(1, vh));
+      pars.forEach(function (im) {
+        im.style.setProperty('--py', (+im.dataset.dir > 0 ? -5 - p * 6 : -5 + p * 5).toFixed(2) + '%');
+      });
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', function () { onScroll(); updateGallery(); });
+  window.addEventListener('load', function () { updateGallery(); onScroll(); });
+  updateGallery();
+  onScroll();
+})();
+</script>
+
+</body></html>
